@@ -50,6 +50,8 @@ public class playerControler : MonoBehaviour
             greenRB.velocity = new Vector2(greenSpeed,greenRB.velocity.y);
         }else if(Input.GetKey("a")){
             greenRB.velocity = new Vector2(-greenSpeed,greenRB.velocity.y);
+        }else if(greenIsGrounded){
+            //idle
         }
         //green double jump
         /*if((Input.GetKeyDown("w")||Input.GetKeyDown(KeyCode.Space))&&!greenIsGrounded&&hasDoubleJump&&completedJumpOne){
@@ -70,6 +72,9 @@ public class playerControler : MonoBehaviour
             redRB.velocity = new Vector2(redSpeed, redRB.velocity.y);
         }else if(Input.GetKey("left")){
             redRB.velocity = new Vector2(-redSpeed, redRB.velocity.y);
+        }else if(redIsGrounded){
+            //idle
+            //Debug.Log("Idle");
         }
         //red jump
         if(Input.GetKey("up")||Input.GetKey(KeyCode.RightShift)){

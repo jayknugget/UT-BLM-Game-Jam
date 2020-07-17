@@ -2,35 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Place this on just one player and then drag in all the references
+
 public class playerControler : MonoBehaviour
 {
-    public GameObject redPlayer;
+    private GameObject redPlayer;
     private Rigidbody2D redRB;
-    public GameObject greenPlayer;
+    private GameObject greenPlayer;
     private Rigidbody2D greenRB;
-    public GameObject greenGroundCheck;
+    private GameObject greenGroundCheck;
     private bool greenIsGrounded;
-    public GameObject redGroundCheck;
-    public LayerMask groundLayers;
+    private GameObject redGroundCheck;
+    private LayerMask groundLayers;
     private bool redIsGrounded;
-    public float greenSpeed = 2;
-    public float redSpeed = 2;
-    public float jumpForce = 10;
+    public float greenSpeedGround = 1;
+    public float greenSpeedAir = 5;
+    public float redSpeed = 5;
+    public float jumpForce = 5;
     private bool hasDoubleJump;
 
     // Start is called before the first frame update
     void Awake()
     {
+        greenPlayer = GameObject.FindGameObjectWithTag("greenPlayer");
+        redPlayer = GameObject.FindGameObjectWithTag("redPlayer");
+        greenGroundCheck = GameObject.FindGameObjectWithTag("greenGroundCheck");
+        redGroundCheck = GameObject.FindGameObjectWithTag("redGroundCheck");
         redRB = redPlayer.GetComponent<Rigidbody2D>();
         greenRB = greenPlayer.GetComponent<Rigidbody2D>();
         hasDoubleJump = true; 
-
+        groundLayers = LayerMask.GetMask("Ground");
     }
 
     void Update(){
+
         if(greenIsGrounded){
             hasDoubleJump = true;
         }
+        //green double jump
         if((Input.GetKeyDown("w")||Input.GetKeyDown(KeyCode.Space))&&!greenIsGrounded&&hasDoubleJump){
             greenRB.velocity = new Vector2(greenRB.velocity.x, jumpForce);
             hasDoubleJump = false;
@@ -46,13 +55,24 @@ public class playerControler : MonoBehaviour
         redIsGrounded = Physics2D.OverlapCircle(redGroundCheck.transform.position, .3f, groundLayers);
 
         //movement of green
-        if(Input.GetKey("d")){
-            greenRB.velocity = new Vector2(greenSpeed,greenRB.velocity.y);
-        }else if(Input.GetKey("a")){
-            greenRB.velocity = new Vector2(-greenSpeed,greenRB.velocity.y);
-        }else if(greenIsGrounded){
-            //idle
+        if(greenIsGrounded){
+            //on ground
+            if(Input.GetKey("d")){
+                greenRB.velocity = new Vector2(greenSpeedGround,greenRB.velocity.y);
+            }else if(Input.GetKey("a")){
+                greenRB.velocity = new Vector2(-greenSpeedGround,greenRB.velocity.y);
+            }else if(greenIsGrounded){
+                //idle
+            }
+        }else{
+            //in air
+            if(Input.GetKey("d")){
+                greenRB.velocity = new Vector2(greenSpeedAir,greenRB.velocity.y);
+            }else if(Input.GetKey("a")){
+                greenRB.velocity = new Vector2(-greenSpeedAir,greenRB.velocity.y);
+            }
         }
+        
         //green double jump
         /*if((Input.GetKeyDown("w")||Input.GetKeyDown(KeyCode.Space))&&!greenIsGrounded&&hasDoubleJump&&completedJumpOne){
             greenRB.velocity = new Vector2(greenRB.velocity.x, jumpForce);

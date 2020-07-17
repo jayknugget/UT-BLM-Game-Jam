@@ -60,17 +60,23 @@ public class playerControler : MonoBehaviour
             //on ground
             if(Input.GetKey("d")){
                 greenRB.velocity = new Vector2(greenSpeedGround,greenRB.velocity.y);
+                greenPlayer.GetComponent<Animator>().Play("green_walk_anim");
+                greenPlayer.GetComponent<SpriteRenderer>().flipX = false;
             }else if(Input.GetKey("a")){
                 greenRB.velocity = new Vector2(-greenSpeedGround,greenRB.velocity.y);
+                greenPlayer.GetComponent<Animator>().Play("green_walk_anim");
+                greenPlayer.GetComponent<SpriteRenderer>().flipX = true;
             }else if(greenIsGrounded){
-                //idle
+                greenPlayer.GetComponent<Animator>().Play("green_idle_anim");
             }
         }else{
             //in air
             if(Input.GetKey("d")){
                 greenRB.velocity = new Vector2(greenSpeedAir,greenRB.velocity.y);
+                greenPlayer.GetComponent<SpriteRenderer>().flipX = false;
             }else if(Input.GetKey("a")){
                 greenRB.velocity = new Vector2(-greenSpeedAir,greenRB.velocity.y);
+                greenPlayer.GetComponent<SpriteRenderer>().flipX = true;
             }
         }
         
@@ -91,21 +97,28 @@ public class playerControler : MonoBehaviour
         if (redIsGrounded){
             if (Input.GetKey("right")){
                 redRB.velocity = new Vector2(redSpeedGround, redRB.velocity.y);
+                redPlayer.GetComponent<Animator>().Play("red_walk_anim");
+                redPlayer.GetComponent<SpriteRenderer>().flipX = false;
             }
             else if (Input.GetKey("left")){
                 redRB.velocity = new Vector2(-redSpeedGround, redRB.velocity.y);
+                redPlayer.GetComponent<Animator>().Play("red_walk_anim");
+                redPlayer.GetComponent<SpriteRenderer>().flipX = true;
             }
             else if (redIsGrounded){
+                redPlayer.GetComponent<Animator>().Play("red_idle_anim");
                 //idle
                 //Debug.Log("Idle");
             }
         } else {
             if (Input.GetKey("right")){
                 redRB.velocity = new Vector2(redSpeedAir, redRB.velocity.y);
+                redPlayer.GetComponent<SpriteRenderer>().flipX = false;
             }
             else if (Input.GetKey("left"))
             {
                 redRB.velocity = new Vector2(-redSpeedAir, redRB.velocity.y);
+                redPlayer.GetComponent<SpriteRenderer>().flipX = true;
             }
         }
         //red jump

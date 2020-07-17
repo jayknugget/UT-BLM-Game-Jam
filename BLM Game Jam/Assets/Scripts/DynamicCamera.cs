@@ -17,8 +17,8 @@ public class DynamicCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player1 = GameObject.FindWithTag("Player");
-        player2 = GameObject.FindWithTag("Player2");
+        player1 = GameObject.FindWithTag("greenPlayer");
+        player2 = GameObject.FindWithTag("redPlayer");
         thisCamera = GetComponent<Camera>();
 
         TransformCamera();

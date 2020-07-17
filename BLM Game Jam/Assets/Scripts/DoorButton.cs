@@ -7,25 +7,26 @@ public class DoorButton : MonoBehaviour
 {
     public GameObject door;
     public float buttonDrop = 1f;
-    public float buttonDebounce = 0.01f;
+    public float buttonDebounce = 1f;
 
     private bool playerOnButton;
-    private bool switchingState;
+    private bool switchingStates;
     private Vector2 pos1;
     private Vector2 pos2;
 
     void Start()
     {
         playerOnButton = false;
-        switchingState = false;
+        switchingStates = false;
         pos1 = gameObject.transform.position;               // up
         pos2 = new Vector2(pos1.x, pos1.y - buttonDrop);    // down
     }
 
     void Update()
     {
-        if(!playerOnButton && !switchingState)
+        if(!playerOnButton && !switchingStates)
         {
+            door.GetComponent<BoxCollider2D>().enabled = true;
             gameObject.transform.position = pos1;
         }
     }
@@ -33,30 +34,28 @@ public class DoorButton : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         playerOnButton = true;
-        if(!switchingState)
+        if(!switchingStates)
         {
             door.GetComponent<BoxCollider2D>().enabled = false;
-            switchingState = true;
             gameObject.transform.position = pos2;
-            StartCoroutine(ResetSwitchingState());
+            switchingStates = true;
+            StartCoroutine(SwitchDebounce());
         }
     }
 
-    IEnumerator ResetSwitchingState()
+    IEnumerator SwitchDebounce()
     {
         yield return new WaitForSeconds(buttonDebounce);
-        switchingState = false;
+        switchingStates = false;
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
         playerOnButton = false;
-        if(!switchingState)
+        if(!switchingStates)
         {
-            door.GetComponent<BoxCollider2D>().enabled = true;
-            switchingState = true;
-            gameObject.transform.position = pos1;
-            StartCoroutine(ResetSwitchingState());
+            switchingStates = true;
+            StartCoroutine(SwitchDebounce());
         }
     }
 }

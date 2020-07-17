@@ -45,5 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greenSpeedGround: 1
   greenSpeedAir: 5
-  redSpeed: 5
+  redSpeedGround: 5
+  redSpeedAir: 5
   jumpForce: 5

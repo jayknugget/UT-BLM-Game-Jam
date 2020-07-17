@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class passThrough : MonoBehaviour
 {
-    public GameObject playerToIgnore;
-    public GameObject topOfPlayer;
+    //The tag of the player to ignore
+    public string playerToIgnoreTag;
+
+    private GameObject playerToIgnore;
+    private GameObject topOfPlayer;
+
+    void Awake()
+    {
+        playerToIgnore = GameObject.FindGameObjectWithTag(playerToIgnoreTag);
+        topOfPlayer = playerToIgnore.GetComponentsInChildren<Transform>()[2].gameObject;    // first child is itself
+        Debug.Log(topOfPlayer.name);
+    }
 
     // Update is called once per frame
     void Update()

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class passThrough : MonoBehaviour
 {
+
+    //Place on objects that you want to be passable through.
     public GameObject playerToIgnore;
     public GameObject topOfPlayer;
 

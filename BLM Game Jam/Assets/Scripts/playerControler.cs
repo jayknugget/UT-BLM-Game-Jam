@@ -27,12 +27,20 @@ public class playerControler : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
+    void Update(){
         if(greenIsGrounded){
             hasDoubleJump = true;
         }
+        if((Input.GetKeyDown("w")||Input.GetKeyDown(KeyCode.Space))&&!greenIsGrounded&&hasDoubleJump){
+            greenRB.velocity = new Vector2(greenRB.velocity.x, jumpForce);
+            hasDoubleJump = false;
+        }
+    }
+    void FixedUpdate()
+    {
+        /*if(greenIsGrounded){
+            hasDoubleJump = true;
+        }*/
         //check to see if the players are touching the ground
         greenIsGrounded = Physics2D.OverlapCircle(greenGroundCheck.transform.position, .3f, groundLayers);
         redIsGrounded = Physics2D.OverlapCircle(redGroundCheck.transform.position, .3f, groundLayers);
@@ -43,18 +51,18 @@ public class playerControler : MonoBehaviour
         }else if(Input.GetKey("a")){
             greenRB.velocity = new Vector2(-greenSpeed,greenRB.velocity.y);
         }
+        //green double jump
+        /*if((Input.GetKeyDown("w")||Input.GetKeyDown(KeyCode.Space))&&!greenIsGrounded&&hasDoubleJump&&completedJumpOne){
+            greenRB.velocity = new Vector2(greenRB.velocity.x, jumpForce);
+            hasDoubleJump = false;
+        }*/
         //green jump
         if(Input.GetKey("w")||Input.GetKey(KeyCode.Space)){
             if(greenIsGrounded){
                 greenRB.velocity = new Vector2(greenRB.velocity.x, jumpForce);
             }          
         }
-        //green double jump
-        if((Input.GetKeyDown("w")||Input.GetKeyDown(KeyCode.Space))&&!greenIsGrounded&&hasDoubleJump){
-            greenRB.velocity = new Vector2(greenRB.velocity.x, jumpForce);
-            hasDoubleJump = false;
-
-        }
+        
         
 
         //movement of red

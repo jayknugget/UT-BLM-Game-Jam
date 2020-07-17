@@ -17,7 +17,8 @@ public class playerControler : MonoBehaviour
     private bool redIsGrounded;
     public float greenSpeedGround = 1;
     public float greenSpeedAir = 5;
-    public float redSpeed = 5;
+    public float redSpeedGround = 5;
+    public float redSpeedAir = 5;
     public float jumpForce = 5;
     private bool hasDoubleJump;
 
@@ -84,17 +85,28 @@ public class playerControler : MonoBehaviour
                 greenRB.velocity = new Vector2(greenRB.velocity.x, jumpForce);
             }          
         }
-        
-        
+
 
         //movement of red
-        if(Input.GetKey("right")){
-            redRB.velocity = new Vector2(redSpeed, redRB.velocity.y);
-        }else if(Input.GetKey("left")){
-            redRB.velocity = new Vector2(-redSpeed, redRB.velocity.y);
-        }else if(redIsGrounded){
-            //idle
-            //Debug.Log("Idle");
+        if (redIsGrounded){
+            if (Input.GetKey("right")){
+                redRB.velocity = new Vector2(redSpeedGround, redRB.velocity.y);
+            }
+            else if (Input.GetKey("left")){
+                redRB.velocity = new Vector2(-redSpeedGround, redRB.velocity.y);
+            }
+            else if (redIsGrounded){
+                //idle
+                //Debug.Log("Idle");
+            }
+        } else {
+            if (Input.GetKey("right")){
+                redRB.velocity = new Vector2(redSpeedAir, redRB.velocity.y);
+            }
+            else if (Input.GetKey("left"))
+            {
+                redRB.velocity = new Vector2(-redSpeedAir, redRB.velocity.y);
+            }
         }
         //red jump
         if(Input.GetKey("up")||Input.GetKey(KeyCode.RightShift)){

@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84245dd9aa59ec14284f8285f8e19403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerToIgnoreTag: greenPlayer
+  playerToIgnoreTag: redPlayer
 --- !u!61 &482805498
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -397,7 +397,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   nextSceneName: 
-  allowedPlayer: {fileID: 0}
+  allowedPlayerTag: 
 --- !u!61 &915893386
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -747,7 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84245dd9aa59ec14284f8285f8e19403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerToIgnoreTag: redPlayer
+  playerToIgnoreTag: greenPlayer
 --- !u!1 &1572421917
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +827,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1572421918}
         m_MethodName: redCompleted
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -836,8 +836,8 @@ MonoBehaviour:
           m_StringArgument: TestNextScene
           m_BoolArgument: 0
         m_CallState: 2
-  nextSceneName: 
-  allowedPlayer: {fileID: 0}
+  nextSceneName: TestNextScene
+  allowedPlayerTag: redPlayer
 --- !u!61 &1862320441
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -964,7 +964,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1572421918}
         m_MethodName: greenCompleted
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -973,8 +973,8 @@ MonoBehaviour:
           m_StringArgument: TestNextScene
           m_BoolArgument: 0
         m_CallState: 2
-  nextSceneName: 
-  allowedPlayer: {fileID: 0}
+  nextSceneName: TestNextScene
+  allowedPlayerTag: greenPlayer
 --- !u!61 &1875629045
 BoxCollider2D:
   m_ObjectHideFlags: 0

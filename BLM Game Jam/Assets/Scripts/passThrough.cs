@@ -14,7 +14,7 @@ public class passThrough : MonoBehaviour
     {
         playerToIgnore = GameObject.FindGameObjectWithTag(playerToIgnoreTag);
         topOfPlayer = playerToIgnore.GetComponentsInChildren<Transform>()[2].gameObject;    // first child is itself
-        Debug.Log(topOfPlayer.name);
+        //Debug.Log(topOfPlayer.name);
     }
 
     // Update is called once per frame

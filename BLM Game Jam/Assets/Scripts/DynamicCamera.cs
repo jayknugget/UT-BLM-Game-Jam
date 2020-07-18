@@ -16,7 +16,7 @@ public class DynamicCamera : MonoBehaviour
     private Vector2 maxBgBounds;
     private float screenAspect;
 
-    public float magicFactor = 5f;
+    public float screenScalingPercentBoundary = 0.8f; // screen scales when the players are this % of the way out the screen
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +25,7 @@ public class DynamicCamera : MonoBehaviour
         player2 = GameObject.FindWithTag("redPlayer");
         thisCamera = GetComponent<Camera>();
         screenAspect = (float)Screen.width / (float)Screen.height;
+        screenScalingPercentBoundary = Mathf.Clamp(screenScalingPercentBoundary, 0, 1.0f);
 
         bgGameObject = GameObject.FindWithTag("Background");
         if (bgGameObject != null)
@@ -43,7 +44,16 @@ public class DynamicCamera : MonoBehaviour
             Debug.LogWarning("There is no background SpriteRenderer in the scene.");
         }
 
+        PreCenterCamera();
         TransformCamera();
+    }
+
+    private void PreCenterCamera()
+    {
+        Vector2 pos1 = GetPlayerPosition(player1);
+        Vector2 pos2 = GetPlayerPosition(player2);
+
+        thisCamera.transform.position = CenterCamera(pos1, pos2);
     }
 
     // Update is called once per frame
@@ -57,18 +67,41 @@ public class DynamicCamera : MonoBehaviour
         Vector2 pos1 = GetPlayerPosition(player1);
         Vector2 pos2 = GetPlayerPosition(player2);
 
-        thisCamera.orthographicSize = Mathf.Clamp(Vector3.Magnitude(pos1 - pos2) / magicFactor, minCameraSize, maxCameraSize);
+        thisCamera.orthographicSize = Mathf.Clamp(GetNewScale(pos1, pos2), minCameraSize, maxCameraSize);
         // todo, lerp camera
         thisCamera.transform.position = CenterCamera(pos1, pos2);
+    }
+
+    private float GetNewScale(Vector2 pos1, Vector2 pos2)
+    {
+        Vector3 camCenter = (pos1 + pos2) / 2;
+        Vector3 camDims = GetCamExtents() * 2;
+        Vector3 playerDiff = pos2 - pos1;
+        Vector3 playerScreenProportion = new Vector3(Math.Abs(playerDiff.x) / camDims.x, Math.Abs(playerDiff.y) / camDims.y);
+
+        float newHeight = 0;
+        if (playerScreenProportion.x > playerScreenProportion.y)
+        {
+            float newWidth = playerScreenProportion.x * camDims.x / screenScalingPercentBoundary;
+            newHeight = newWidth / screenAspect;
+        }
+        else
+        {
+            newHeight = playerScreenProportion.y * camDims.y / screenScalingPercentBoundary;
+        }
+
+        return newHeight / 2;
     }
 
     private Vector3 CenterCamera(Vector2 pos1, Vector2 pos2)
     {
         Vector3 newCam = new Vector3();
         newCam = (pos1 + pos2) / 2;
-        newCam.z = -10;
 
-        return AdjustToBGEdge(newCam);
+        Vector3 adjustedCamCenter = AdjustToBGEdge(newCam);
+        adjustedCamCenter.z = -10;
+
+        return adjustedCamCenter;
     }
 
     private Vector3 AdjustToBGEdge(Vector3 newCam)

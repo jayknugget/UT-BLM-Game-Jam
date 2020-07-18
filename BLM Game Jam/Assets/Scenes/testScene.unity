@@ -397,7 +397,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   nextSceneName: 
-  allowedPlayerTag: 
 --- !u!61 &915893386
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -819,25 +818,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1862320439}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2f39bfb50ecd4b43a61261dd6e25879, type: 3}
+  m_Script: {fileID: 11500000, guid: 74672f8c91b13a24983e1c9236a7c4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneMethod:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1572421918}
-        m_MethodName: redCompleted
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TestNextScene
-          m_BoolArgument: 0
-        m_CallState: 2
-  nextSceneName: TestNextScene
   allowedPlayerTag: redPlayer
+  nextSceneName: TestNextScene
 --- !u!61 &1862320441
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -956,25 +941,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1875629043}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2f39bfb50ecd4b43a61261dd6e25879, type: 3}
+  m_Script: {fileID: 11500000, guid: 74672f8c91b13a24983e1c9236a7c4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneMethod:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1572421918}
-        m_MethodName: greenCompleted
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TestNextScene
-          m_BoolArgument: 0
-        m_CallState: 2
-  nextSceneName: TestNextScene
   allowedPlayerTag: greenPlayer
+  nextSceneName: TestNextScene
 --- !u!61 &1875629045
 BoxCollider2D:
   m_ObjectHideFlags: 0

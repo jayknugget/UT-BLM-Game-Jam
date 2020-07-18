@@ -12,14 +12,10 @@ public class NextSceneTrigger : MonoBehaviour
     [SerializeField]
     public StringEvent nextSceneMethod;
     public string nextSceneName;
-    public string allowedPlayerTag;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == allowedPlayerTag){
-            nextSceneMethod.Invoke(nextSceneName);
-            collision.gameObject.SetActive(false);
-        }
-        
+        nextSceneMethod.Invoke(nextSceneName);
+
     }
 }

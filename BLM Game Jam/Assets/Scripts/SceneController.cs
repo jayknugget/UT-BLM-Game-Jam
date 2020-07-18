@@ -12,20 +12,7 @@ public class SceneController : MonoBehaviour
     /**
      * Find the next scene name within the Build Settings
      */
-    private string nextSceneName;
-    private static bool greenHasEntered;
-    private static bool redHasEntered;
-    void Awake()
-    {
-        greenHasEntered = false;
-        redHasEntered = false;
-    }
-    void Update()
-    {
-        if(greenHasEntered&&redHasEntered){
-            GoToScene(nextSceneName);
-        }
-    }
+
     public void GoToScene(string nextScene)
     {
         SceneManager.LoadScene(nextScene);
@@ -39,15 +26,4 @@ public class SceneController : MonoBehaviour
         // loading bar?
     }
 
-    public void greenCompleted(string nextScene){
-        nextSceneName = nextScene;
-        greenHasEntered = true;
-        
-    }
-
-    public void redCompleted(string nextScene){
-        nextSceneName = nextScene;
-        redHasEntered = true;
-        
-    }
 }

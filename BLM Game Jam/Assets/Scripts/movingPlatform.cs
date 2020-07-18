@@ -9,7 +9,7 @@ public class movingPlatform : MonoBehaviour
     private bool goingRight;
     
     //stops the platform from moving the player once they get off
-    void OnCollisionExit2D(Collision2D other)
+    /*void OnCollisionExit2D(Collision2D other)
     {
         other.transform.parent = this.transform.parent;
     }
@@ -17,7 +17,7 @@ public class movingPlatform : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         other.transform.parent = this.transform;
-    }
+    }*/
     void Awake()
     {
         leftEndPosition = this.transform.GetChild(0).position;

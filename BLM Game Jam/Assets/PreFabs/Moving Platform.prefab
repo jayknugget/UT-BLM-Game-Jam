@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8524485907449977650}
   m_Layer: 0
-  m_Name: Right end
+  m_Name: Right end movement
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -234,7 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8524485907603910518}
   m_Layer: 0
-  m_Name: Left end
+  m_Name: Left end movement
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

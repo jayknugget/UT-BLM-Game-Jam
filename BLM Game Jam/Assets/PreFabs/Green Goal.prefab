@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 245946940716921562}
   - component: {fileID: 245946940716921561}
   - component: {fileID: 245946940716921560}
+  - component: {fileID: -540218717523014199}
   m_Layer: 0
   m_Name: Green Goal
   m_TagString: Untagged
@@ -123,3 +124,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allowedPlayerTag: greenPlayer
   nextSceneName: TestNextScene
+--- !u!114 &-540218717523014199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245946940716921567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84245dd9aa59ec14284f8285f8e19403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerToIgnoreTag: redPlayer

@@ -121,4 +121,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84245dd9aa59ec14284f8285f8e19403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerToIgnoreTag: redPlayer
+  playerToIgnoreTag: greenPlayer

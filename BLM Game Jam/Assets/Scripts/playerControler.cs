@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class playerControler : MonoBehaviour
 {
-    private const float groundCheckRadius = .03f;
-
     private GameObject redPlayer;
     private Rigidbody2D redRB;
     private Animator redAnim;
@@ -19,7 +17,6 @@ public class playerControler : MonoBehaviour
     private GameObject redGroundCheck;
     private LayerMask groundLayers;
     private bool redIsGrounded;
-    
     public float greenSpeedGround = 1;
     public float greenSpeedAir = 5;
     public float redSpeedGround = 5;
@@ -66,8 +63,8 @@ public class playerControler : MonoBehaviour
             hasDoubleJump = true;
         }*/
         //check to see if the players are touching the ground
-        greenIsGrounded = Physics2D.OverlapCircle(greenGroundCheck.transform.position, groundCheckRadius, groundLayers);
-        redIsGrounded = Physics2D.OverlapCircle(redGroundCheck.transform.position, groundCheckRadius, groundLayers);
+        greenIsGrounded = Physics2D.OverlapCircle(greenGroundCheck.transform.position, .3f, groundLayers);
+        redIsGrounded = Physics2D.OverlapCircle(redGroundCheck.transform.position, .3f, groundLayers);
 
         //movement of green
         if(greenIsGrounded){

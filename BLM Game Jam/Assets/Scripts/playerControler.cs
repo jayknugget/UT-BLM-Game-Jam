@@ -86,6 +86,7 @@ public class playerControler : MonoBehaviour
                 greenPlayer.GetComponent<SpriteRenderer>().flipX = true;
             }else if(greenIsGrounded){
                 greenAnim.Play("green_idle_anim");
+                greenRB.velocity = new Vector2(0f,0f);
             }
         }else{
             //in air
@@ -125,6 +126,7 @@ public class playerControler : MonoBehaviour
             }
             else if (redIsGrounded){
                 redAnim.Play("red_idle_anim");
+                redRB.velocity = new Vector2(0f,0f);
                 //idle
                 //Debug.Log("Idle");
             }

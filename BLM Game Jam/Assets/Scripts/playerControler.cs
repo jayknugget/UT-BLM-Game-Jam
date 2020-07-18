@@ -8,8 +8,10 @@ public class playerControler : MonoBehaviour
 {
     private GameObject redPlayer;
     private Rigidbody2D redRB;
+    private Animator redAnim;
     private GameObject greenPlayer;
     private Rigidbody2D greenRB;
+    private Animator greenAnim;
     private GameObject greenGroundCheck;
     private bool greenIsGrounded;
     private GameObject redGroundCheck;
@@ -31,6 +33,8 @@ public class playerControler : MonoBehaviour
         redGroundCheck = GameObject.FindGameObjectWithTag("redGroundCheck");
         redRB = redPlayer.GetComponent<Rigidbody2D>();
         greenRB = greenPlayer.GetComponent<Rigidbody2D>();
+        greenAnim = greenPlayer.GetComponent<Animator>();
+        redAnim = redPlayer.GetComponent<Animator>();
         hasDoubleJump = true; 
         groundLayers = LayerMask.GetMask("Ground");
     }
@@ -39,7 +43,14 @@ public class playerControler : MonoBehaviour
 
         if(greenIsGrounded){
             hasDoubleJump = true;
+        }else{
+            greenAnim.Play("green_jump_anim");
         }
+        
+        if(!redIsGrounded){
+            redAnim.Play("red_jump_anim");
+        }
+
         //green double jump
         if((Input.GetKeyDown("w")||Input.GetKeyDown(KeyCode.Space))&&!greenIsGrounded&&hasDoubleJump){
             greenRB.velocity = new Vector2(greenRB.velocity.x, jumpForce);
@@ -60,14 +71,14 @@ public class playerControler : MonoBehaviour
             //on ground
             if(Input.GetKey("d")){
                 greenRB.velocity = new Vector2(greenSpeedGround,greenRB.velocity.y);
-                greenPlayer.GetComponent<Animator>().Play("green_walk_anim");
+                greenAnim.Play("green_walk_anim");
                 greenPlayer.GetComponent<SpriteRenderer>().flipX = false;
             }else if(Input.GetKey("a")){
                 greenRB.velocity = new Vector2(-greenSpeedGround,greenRB.velocity.y);
-                greenPlayer.GetComponent<Animator>().Play("green_walk_anim");
+                greenAnim.Play("green_walk_anim");
                 greenPlayer.GetComponent<SpriteRenderer>().flipX = true;
             }else if(greenIsGrounded){
-                greenPlayer.GetComponent<Animator>().Play("green_idle_anim");
+                greenAnim.Play("green_idle_anim");
             }
         }else{
             //in air
@@ -97,16 +108,16 @@ public class playerControler : MonoBehaviour
         if (redIsGrounded){
             if (Input.GetKey("right")){
                 redRB.velocity = new Vector2(redSpeedGround, redRB.velocity.y);
-                redPlayer.GetComponent<Animator>().Play("red_walk_anim");
+                redAnim.Play("red_walk_anim");
                 redPlayer.GetComponent<SpriteRenderer>().flipX = false;
             }
             else if (Input.GetKey("left")){
                 redRB.velocity = new Vector2(-redSpeedGround, redRB.velocity.y);
-                redPlayer.GetComponent<Animator>().Play("red_walk_anim");
+                redAnim.Play("red_walk_anim");
                 redPlayer.GetComponent<SpriteRenderer>().flipX = true;
             }
             else if (redIsGrounded){
-                redPlayer.GetComponent<Animator>().Play("red_idle_anim");
+                redAnim.Play("red_idle_anim");
                 //idle
                 //Debug.Log("Idle");
             }

@@ -108,12 +108,12 @@ public class playerControler : MonoBehaviour
         if (redIsGrounded){
             if (Input.GetKey("right")){
                 redRB.velocity = new Vector2(redSpeedGround, redRB.velocity.y);
-                redAnim.Play("red_walk_anim");
+                redAnim.Play("red_walk2_anim");
                 redPlayer.GetComponent<SpriteRenderer>().flipX = false;
             }
             else if (Input.GetKey("left")){
                 redRB.velocity = new Vector2(-redSpeedGround, redRB.velocity.y);
-                redAnim.Play("red_walk_anim");
+                redAnim.Play("red_walk2_anim");
                 redPlayer.GetComponent<SpriteRenderer>().flipX = true;
             }
             else if (redIsGrounded){

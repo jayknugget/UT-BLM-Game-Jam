@@ -21,18 +21,15 @@ public class endLevelTrigger : MonoBehaviour
             collision.gameObject.SetActive(false);            
         }
 
+        if (redHasFinished && greenHasFinished)
+        {
+            SceneController sc = new SceneController();
+            sc.GoToScene(nextSceneName);
+        }
     }
 
     void Awake() {
         redHasFinished = false;
         greenHasFinished = false;
-    }
-
-    void Update()
-    {
-        if(redHasFinished&&greenHasFinished){
-            SceneController sc = new SceneController();
-            sc.GoToScene(nextSceneName);
-        }
     }
 }

@@ -23,8 +23,7 @@ public class endLevelTrigger : MonoBehaviour
 
         if (redHasFinished && greenHasFinished)
         {
-            SceneController sc = new SceneController();
-            sc.GoToScene(nextSceneName);
+            SceneControl.GoToScene(nextSceneName);  // uses static call instead
         }
     }
 

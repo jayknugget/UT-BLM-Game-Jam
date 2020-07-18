@@ -63,9 +63,16 @@ public class playerControler : MonoBehaviour
             hasDoubleJump = true;
         }*/
         //check to see if the players are touching the ground
-        greenIsGrounded = Physics2D.OverlapCircle(greenGroundCheck.transform.position, .3f, groundLayers);
-        redIsGrounded = Physics2D.OverlapCircle(redGroundCheck.transform.position, .3f, groundLayers);
+        //greenIsGrounded = Physics2D.OverlapCircle(greenGroundCheck.transform.position, .3f, groundLayers);
+        //redIsGrounded = Physics2D.OverlapCircle(redGroundCheck.transform.position, .3f, groundLayers);
+        
+        greenIsGrounded = Physics2D.OverlapBox(greenGroundCheck.transform.position,new Vector2(0.87f,.3f),0f,groundLayers);
+        redIsGrounded = Physics2D.OverlapBox(redGroundCheck.transform.position, new Vector2(.88f,.3f),0f,groundLayers);
 
+        //show width of ground check boxes
+        /*Debug.DrawLine(redGroundCheck.transform.position-new Vector3(.44f,0f,0f),redGroundCheck.transform.position+new Vector3(.44f,0f,0f),Color.white);
+        Debug.DrawLine(greenGroundCheck.transform.position-new Vector3(.435f,0f,0f),greenGroundCheck.transform.position+new Vector3(.435f,0f,0f),Color.white);
+        */
         //movement of green
         if(greenIsGrounded){
             //on ground

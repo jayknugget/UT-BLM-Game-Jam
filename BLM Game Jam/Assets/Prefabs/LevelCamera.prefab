@@ -96,6 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23729e74e2fb0848a7f23849308be52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minCameraSize: 4
+  minCameraSize: 5
   maxCameraSize: 15
   magicFactor: 3

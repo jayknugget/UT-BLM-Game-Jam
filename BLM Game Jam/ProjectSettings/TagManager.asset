@@ -9,6 +9,7 @@ TagManager:
   - redGroundCheck
   - greenGroundCheck
   - Background
+  - BackgroundMusic
   layers:
   - Default
   - TransparentFX

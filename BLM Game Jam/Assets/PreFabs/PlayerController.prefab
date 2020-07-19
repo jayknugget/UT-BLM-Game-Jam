@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7775657646374245553}
   - component: {fileID: 7775657646374245554}
   m_Layer: 0
-  m_Name: Player Controler
+  m_Name: PlayerController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,4 +47,4 @@ MonoBehaviour:
   greenSpeedAir: 5
   redSpeedGround: 5
   redSpeedAir: 5
-  jumpForce: 5
+  jumpForce: 6.5

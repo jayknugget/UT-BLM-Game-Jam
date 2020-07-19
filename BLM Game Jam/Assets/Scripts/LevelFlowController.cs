@@ -48,25 +48,30 @@ public class LevelFlowController : MonoBehaviour
     IEnumerator Tutorial1()
     {
         playerController.enabled = false;   // disable player input
-        dimScreen.DimIn();
-        while (dimScreen.isDimming)         // wait for screen to dim in
+        if (dimScreen != null)
         {
-            yield return null;
+            dimScreen.DimIn();
+            while (dimScreen.isDimming)         // wait for screen to dim in
+            {
+                yield return null;
+            }
+            tutorial.gameObject.SetActive(true);
         }
-        tutorial.gameObject.SetActive(true);
-
         yield return new WaitForSeconds(3); // debounce player input so they don't skip it
 
-        while (!Input.anyKeyDown)           // wait for the user to press a key
+        if (dimScreen != null)
         {
-            yield return null;
-        }
-        tutorial.gameObject.SetActive(false);
+            while (!Input.anyKeyDown)           // wait for the user to press a key
+            {
+                yield return null;
+            }
+            tutorial.gameObject.SetActive(false);
 
-        dimScreen.DimOut();
-        while (dimScreen.isDimming)         // wait for screen to dim in
-        {
-            yield return null;
+            dimScreen.DimOut();
+            while (dimScreen.isDimming)         // wait for screen to dim in
+            {
+                yield return null;
+            }
         }
 
         playerController.enabled = true;    // enable player input

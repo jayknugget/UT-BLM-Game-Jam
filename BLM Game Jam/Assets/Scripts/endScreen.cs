@@ -29,7 +29,6 @@ public class endScreen : MonoBehaviour
            badEnding.SetActive(true);
        }
        
-       SceneControl.ResetCounters();
     }
 
     public void Quit(){
@@ -38,6 +37,7 @@ public class endScreen : MonoBehaviour
     }
 
     public void MainMenu(){
+        SceneControl.ResetCounters();
         SceneManager.LoadScene("TitleScreen");
     }
 }

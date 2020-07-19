@@ -6,7 +6,13 @@ using UnityEngine.SceneManagement;
 public class pauseMenu : MonoBehaviour
 {
     public GameObject pauseScreen;
-    private bool gameIsPaused = false;   
+    private bool gameIsPaused = false; 
+    private GameObject backgroundMusic;  
+
+    void Awake()
+    {
+        backgroundMusic = GameObject.FindGameObjectWithTag("BackgroundMusic");
+    }
 
     // Update is called once per frame
     void Update()
@@ -24,12 +30,15 @@ public class pauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         gameIsPaused = true;
         pauseScreen.SetActive(true);
+        backgroundMusic.GetComponent<AudioSource>().volume = .5f;
+
     }
 
     public void unpauseGame(){
         Time.timeScale = 1f;
         gameIsPaused = false;
         pauseScreen.SetActive(false);
+        backgroundMusic.GetComponent<AudioSource>().volume = 1f;
     }
 
     public void quitGame(){
@@ -40,6 +49,7 @@ public class pauseMenu : MonoBehaviour
     public void restart(){
         Time.timeScale = 1f;
         gameIsPaused = false;
+        backgroundMusic.GetComponent<AudioSource>().volume = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

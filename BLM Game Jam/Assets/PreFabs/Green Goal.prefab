@@ -123,7 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allowedPlayerTag: greenPlayer
-  nextSceneName: TestNextScene
+  nextSceneName: 
+  isLevel: 1
 --- !u!114 &-540218717523014199
 MonoBehaviour:
   m_ObjectHideFlags: 0

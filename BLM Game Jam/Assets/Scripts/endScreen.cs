@@ -5,16 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class endScreen : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private int greenCounter;
+    private int redCounter;
+    void Awake()
     {
-        
-    }
+       greenCounter = SceneControl.greenCounter;   
+       redCounter = SceneControl.redCounter; 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+       if(greenCounter==6 && redCounter==6){
+           //true ending
+       } else{
+           //bad ending
+       }
     }
 
     public void Quit(){

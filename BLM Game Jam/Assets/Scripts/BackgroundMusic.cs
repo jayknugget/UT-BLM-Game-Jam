@@ -12,4 +12,8 @@ public class BackgroundMusic : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
     }
+
+    void Update() {
+        this.transform.position = GameObject.FindGameObjectWithTag("MainCamera").transform.position;
+    }
 }

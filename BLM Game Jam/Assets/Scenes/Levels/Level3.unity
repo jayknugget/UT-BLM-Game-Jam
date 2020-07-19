@@ -1437,6 +1437,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Goal
       objectReference: {fileID: 0}
+    - target: {fileID: 2320389372131441752, guid: 361633db24818e74189f352ee0cc4776,
+        type: 3}
+      propertyPath: isLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2320389372131441752, guid: 361633db24818e74189f352ee0cc4776,
+        type: 3}
+      propertyPath: nextSceneName
+      value: Level1
+      objectReference: {fileID: 0}
     - target: {fileID: 2320389372131441755, guid: 361633db24818e74189f352ee0cc4776,
         type: 3}
       propertyPath: m_LocalPosition.x

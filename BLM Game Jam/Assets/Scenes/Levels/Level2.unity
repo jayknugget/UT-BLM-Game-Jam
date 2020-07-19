@@ -154,10 +154,10 @@ RectTransform:
   m_Father: {fileID: 477480170}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &126422904
 MonoBehaviour:
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.3529412}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dimStart: 0
-  dimEnd: 0
+  dimEnd: 110
   isDimming: 0
 --- !u!1 &155049863
 GameObject:
@@ -932,7 +932,6 @@ GameObject:
   m_Component:
   - component: {fileID: 477480170}
   - component: {fileID: 477480169}
-  - component: {fileID: 477480171}
   - component: {fileID: 477480168}
   - component: {fileID: 477480167}
   m_Layer: 5
@@ -1023,18 +1022,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &477480171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477480166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ed3da333523324b9846e908a14869e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519744658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,6 +1592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 765574795}
   - component: {fileID: 765574797}
+  - component: {fileID: 765574796}
   m_Layer: 5
   m_Name: WallsTutorialPanel
   m_TagString: Untagged
@@ -1638,6 +1626,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &765574796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765574794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ed3da333523324b9846e908a14869e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &765574797
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -16,8 +16,11 @@ public class LevelFlowController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        dimScreen = tutorialCanvas.GetComponentInChildren<DimScreen>();
-        SetTutorial();
+        if(tutorialCanvas != null)
+        {
+            dimScreen = tutorialCanvas.GetComponentInChildren<DimScreen>();
+            SetTutorial();
+        }
     }
 
     private void SetTutorial()

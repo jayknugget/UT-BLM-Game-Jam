@@ -9,10 +9,11 @@ public class LevelFlowController : MonoBehaviour
     public GameObject tutorialCanvas;           // for displaying tutorial notecards
     public DynamicCamera levelCamera;           // for zooming in and out and handing over control
     public pauseMenu pauseMenu;                 // for knowing when game is pawsed
+    public Tutorial tutorial;
+    public bool tutorialDone;
 
     private DimScreen dimScreen;
-    private Tutorial tutorial;
-
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -48,7 +49,7 @@ public class LevelFlowController : MonoBehaviour
         StartCoroutine(Tutorial1());
     }
 
-    IEnumerator Tutorial1()
+    public IEnumerator Tutorial1()
     {
         playerController.enabled = false;   // disable player input
         if (dimScreen != null)
@@ -79,5 +80,6 @@ public class LevelFlowController : MonoBehaviour
 
         playerController.enabled = true;    // enable player input
         levelCamera.normalMode = true;      // zoom in to the players
+        tutorialDone = true;
     }
 }

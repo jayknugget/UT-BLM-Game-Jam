@@ -17,6 +17,13 @@ public class endLevelTrigger : MonoBehaviour
     public string nextSceneName;
     public bool isLevel;
 
+    public Tutorial placeHolder;
+
+    void Awake()
+    {
+        redHasFinished = false;
+        greenHasFinished = false;
+    }
     void Start()
     {
         SceneControl.goToSceneCalled = false;
@@ -79,15 +86,26 @@ public class endLevelTrigger : MonoBehaviour
 
     IEnumerator CountDown(int seconds)
     {
+        if(SceneManager.GetActiveScene().name.Equals("Level1"))
+        {
+            GameObject lfc = GameObject.FindGameObjectWithTag("LevelFlowControl");
+            LevelFlowController controller = lfc.GetComponent<LevelFlowController>();
+            Debug.Log(controller);
+
+            controller.tutorial = placeHolder;
+            controller.tutorialDone = false;
+            StartCoroutine(controller.Tutorial1());
+
+            while (!controller.tutorialDone)
+            {
+                yield return null;
+            }
+        }
+
         for (int i = seconds; i >= 0; i--) {
             // TODO: edit text for counter
             yield return new WaitForSeconds(1);
         }
         SceneControl.GoToSceneAlone(nextSceneName);
-    }
-
-    void Awake() {
-        redHasFinished = false;
-        greenHasFinished = false;
     }
 }

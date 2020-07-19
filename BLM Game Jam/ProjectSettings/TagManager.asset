@@ -10,6 +10,8 @@ TagManager:
   - greenGroundCheck
   - Background
   - BackgroundMusic
+  - LevelFlowControl
+  - HellsUnfairTutorial
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelFlowController : MonoBehaviour
 {
@@ -10,13 +11,32 @@ public class LevelFlowController : MonoBehaviour
     public pauseMenu pauseMenu;                 // for knowing when game is pawsed
 
     private DimScreen dimScreen;
+    private Tutorial tutorial;
 
     // Start is called before the first frame update
     void Awake()
     {
-        if (tutorialCanvas != null)
+        dimScreen = tutorialCanvas.GetComponentInChildren<DimScreen>();
+        SetTutorial();
+    }
+
+    private void SetTutorial()
+    {
+        Tutorial[] children = tutorialCanvas.GetComponentsInChildren<Tutorial>();
+        foreach (Tutorial child in children)
         {
-            dimScreen = tutorialCanvas.GetComponentInChildren<DimScreen>();
+            child.gameObject.SetActive(false);
+        }
+
+        switch(SceneManager.GetActiveScene().name)
+        {
+            case "Level1":
+                tutorial = children[1]; break;
+            case "Level2":
+                tutorial = children[0]; break;
+            default:
+                Debug.Log("default switch case in flow controller");
+                break;
         }
     }
 
@@ -33,14 +53,15 @@ public class LevelFlowController : MonoBehaviour
         {
             yield return null;
         }
-        // TODO: show tutorial notecard
+        tutorial.gameObject.SetActive(true);
+
         yield return new WaitForSeconds(3); // debounce player input so they don't skip it
 
         while (!Input.anyKeyDown)           // wait for the user to press a key
         {
             yield return null;
         }
-        // TODO: show text to press any button
+        tutorial.gameObject.SetActive(false);
 
         dimScreen.DimOut();
         while (dimScreen.isDimming)         // wait for screen to dim in

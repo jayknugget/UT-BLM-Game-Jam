@@ -54,4 +54,9 @@ public class SceneControl
         // wait for input? show something in between? level description?
     }
 
+    public static void ResetCounters(){
+        greenCounter = 0;
+        redCounter = 0;
+    }
+
 }

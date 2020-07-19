@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 245946940716921561}
   - component: {fileID: 245946940716921560}
   - component: {fileID: -540218717523014199}
+  - component: {fileID: 5151545304717886820}
+  - component: {fileID: 4043542966650746826}
   m_Layer: 0
   m_Name: Green Goal
   m_TagString: Untagged
@@ -138,3 +140,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerToIgnoreTag: redPlayer
+--- !u!95 &5151545304717886820
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245946940716921567}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6f04cefafd12e9b43b0e873e8345a942, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4043542966650746826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245946940716921567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 511addcf76f3f524aa8c3e760b769b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

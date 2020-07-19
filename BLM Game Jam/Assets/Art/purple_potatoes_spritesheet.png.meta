@@ -1,0 +1,773 @@
+fileFormatVersion: 2
+guid: 6b3eb6efc565abb42ac7011c7b9dfbac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7286396363541656010
+    second: purple_potatoes_spritesheet_0
+  - first:
+      213: -1978615542686222688
+    second: purple_potatoes_spritesheet_1
+  - first:
+      213: -4881866999743980864
+    second: purple_potatoes_spritesheet_2
+  - first:
+      213: 1833028375266133173
+    second: purple_potatoes_spritesheet_3
+  - first:
+      213: 2519071834162017007
+    second: purple_potatoes_spritesheet_4
+  - first:
+      213: -3338413178478520240
+    second: purple_potatoes_spritesheet_5
+  - first:
+      213: -4801422301227610044
+    second: purple_potatoes_spritesheet_6
+  - first:
+      213: 79479626782475025
+    second: purple_potatoes_spritesheet_7
+  - first:
+      213: -8128932972876978057
+    second: purple_potatoes_spritesheet_8
+  - first:
+      213: -5192624673851109121
+    second: purple_potatoes_spritesheet_9
+  - first:
+      213: 3524808107861900687
+    second: purple_potatoes_spritesheet_10
+  - first:
+      213: -3280082409841088484
+    second: purple_potatoes_spritesheet_11
+  - first:
+      213: 2236245594485404087
+    second: purple_potatoes_spritesheet_12
+  - first:
+      213: -7065892049214102661
+    second: purple_potatoes_spritesheet_13
+  - first:
+      213: 9107969377119941460
+    second: purple_potatoes_spritesheet_14
+  - first:
+      213: -9083593133899590889
+    second: purple_potatoes_spritesheet_15
+  - first:
+      213: 4736226189193803182
+    second: purple_potatoes_spritesheet_16
+  - first:
+      213: 3109164353645937848
+    second: purple_potatoes_spritesheet_17
+  - first:
+      213: -7739581860047666836
+    second: purple_potatoes_spritesheet_18
+  - first:
+      213: 5590948795659101301
+    second: purple_potatoes_spritesheet_19
+  - first:
+      213: 6079892964485160750
+    second: purple_potatoes_spritesheet_20
+  - first:
+      213: -8780595837138721014
+    second: purple_potatoes_spritesheet_21
+  - first:
+      213: 1658565189542158028
+    second: purple_potatoes_spritesheet_22
+  - first:
+      213: 3262193887843753337
+    second: purple_potatoes_spritesheet_23
+  - first:
+      213: -2579477082046795025
+    second: purple_potatoes_spritesheet_24
+  - first:
+      213: -5920051598341970934
+    second: purple_potatoes_spritesheet_25
+  - first:
+      213: -3147494191281438067
+    second: purple_potatoes_spritesheet_26
+  - first:
+      213: 2587667024951689919
+    second: purple_potatoes_spritesheet_27
+  - first:
+      213: 914083899155279980
+    second: purple_potatoes_spritesheet_28
+  - first:
+      213: -180259201341124212
+    second: purple_potatoes_spritesheet_29
+  - first:
+      213: 4523576292555165447
+    second: purple_potatoes_spritesheet_30
+  - first:
+      213: 3490709099240295582
+    second: purple_potatoes_spritesheet_31
+  - first:
+      213: 92682451957806226
+    second: purple_potatoes_spritesheet_32
+  - first:
+      213: -1654389329695578033
+    second: purple_potatoes_spritesheet_33
+  - first:
+      213: 5563443137468167868
+    second: purple_potatoes_spritesheet_34
+  - first:
+      213: 3006264113769416609
+    second: purple_potatoes_spritesheet_35
+  - first:
+      213: -5356845209652298537
+    second: purple_potatoes_spritesheet_36
+  - first:
+      213: 2799938027610980023
+    second: purple_potatoes_spritesheet_37
+  - first:
+      213: 2253928566623181751
+    second: purple_potatoes_spritesheet_38
+  - first:
+      213: -732004497788418038
+    second: purple_potatoes_spritesheet_39
+  - first:
+      213: -452321596300241456
+    second: purple_potatoes_spritesheet_40
+  - first:
+      213: 9005781503979482672
+    second: purple_potatoes_spritesheet_41
+  - first:
+      213: -1753931102215799080
+    second: purple_potatoes_spritesheet_42
+  - first:
+      213: 438763124366682814
+    second: purple_potatoes_spritesheet_43
+  - first:
+      213: -7371049297473849508
+    second: purple_potatoes_spritesheet_44
+  - first:
+      213: -6170748502525116194
+    second: purple_potatoes_spritesheet_45
+  - first:
+      213: -1798797655791487588
+    second: purple_potatoes_spritesheet_46
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1125
+        width: 491
+        height: 523
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1399d33ea7e1560800000000000000
+      internalID: 7286396363541656010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1075
+        width: 540
+        height: 538
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cade8734df104cb0800000000000000
+      internalID: -4881866999743980864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 232
+        width: 558
+        height: 1416
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b403f27899307910800000000000000
+      internalID: 1833028375266133173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1574
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe23bee8c7a85f220800000000000000
+      internalID: 2519071834162017007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1538
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0581e4fd6e29ba1d0800000000000000
+      internalID: -3338413178478520240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 1356
+        width: 9
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44090b62bdbed5db0800000000000000
+      internalID: -4801422301227610044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 1287
+        width: 11
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1130049ac4e5a1100800000000000000
+      internalID: 79479626782475025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 524
+        width: 517
+        height: 545
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453be5474e1066e70800000000000000
+      internalID: 9107969377119941460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 532
+        width: 472
+        height: 497
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713dcb1fb2890f180800000000000000
+      internalID: -9083593133899590889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 585
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b48f5fa188f52b20800000000000000
+      internalID: 3109164353645937848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 570
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c614dc9ed4b779490800000000000000
+      internalID: -7739581860047666836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 557
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574a8aabe4a079d40800000000000000
+      internalID: 5590948795659101301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 547
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2fd884407e106450800000000000000
+      internalID: 6079892964485160750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 532
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d9061ae04a54d20800000000000000
+      internalID: 3262193887843753337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 534
+        width: 45
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a04e7d4ef60c7dda0800000000000000
+      internalID: -5920051598341970934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 494
+        height: 509
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82801c85bad154d0800000000000000
+      internalID: -3147494191281438067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 0
+        width: 480
+        height: 525
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60fd08967a7fac00800000000000000
+      internalID: 914083899155279980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 389
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2947bd1f236494100800000000000000
+      internalID: 92682451957806226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 247
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a70b3a984568b920800000000000000
+      internalID: 3006264113769416609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 249
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dcfbe1e9a9a8a5b0800000000000000
+      internalID: -5356845209652298537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 201
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb1eaae610974f10800000000000000
+      internalID: 2253928566623181751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 53
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8defaeb84f8c8a7e0800000000000000
+      internalID: -1753931102215799080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 53
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebaaa68acbcc61600800000000000000
+      internalID: 438763124366682814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purple_potatoes_spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 0
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c953ebfff036907e0800000000000000
+      internalID: -1798797655791487588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -17,6 +17,7 @@ public class DynamicCamera : MonoBehaviour
     private float screenAspect;
 
     public float screenScalingPercentBoundary = 0.8f; // screen scales when the players are this % of the way out the screen
+    public bool normalMode = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,12 +33,14 @@ public class DynamicCamera : MonoBehaviour
         {
             Vector3 unscaledExtents = bgGameObject.GetComponent<SpriteRenderer>().sprite.bounds.extents;
             float scaleFactor = bgGameObject.transform.lossyScale.x;
-            Vector3 scaledExtents = Vector3.Scale(unscaledExtents, new Vector3(scaleFactor, scaleFactor, 0));
+            Vector3 scaledExtents = Vector3.Scale(unscaledExtents, new Vector3(scaleFactor, scaleFactor, 0))
+                - new Vector3(1f, 1f / screenAspect);
             Vector3 center = bgGameObject.transform.position;
-            minBgBounds = center - scaledExtents;
-            maxBgBounds = center + scaledExtents;
+            minBgBounds = center - scaledExtents - new Vector3(0, 1f / screenAspect);
+            maxBgBounds = center + scaledExtents + new Vector3(0, 1f / screenAspect);
 
             maxCameraSize = Mathf.Min(maxCameraSize, scaledExtents.y);
+            thisCamera.orthographicSize = maxCameraSize;
         }
         else
         {
@@ -67,13 +70,18 @@ public class DynamicCamera : MonoBehaviour
         Vector2 pos1 = GetPlayerPosition(player1);
         Vector2 pos2 = GetPlayerPosition(player2);
 
-        thisCamera.orthographicSize = Mathf.Clamp(GetNewScale(pos1, pos2), minCameraSize, maxCameraSize);
-        // todo, lerp camera
-        thisCamera.transform.position = CenterCamera(pos1, pos2);
+        float newCamSize = Mathf.Clamp(GetNewScale(pos1, pos2), minCameraSize, maxCameraSize);
+        thisCamera.orthographicSize = Mathf.Lerp(thisCamera.orthographicSize, newCamSize, 0.1f);
+
+        thisCamera.transform.position = Vector3.Lerp(thisCamera.transform.position, CenterCamera(pos1, pos2), 0.1f);
     }
 
     private float GetNewScale(Vector2 pos1, Vector2 pos2)
     {
+        if (!normalMode)
+        {
+            return thisCamera.orthographicSize;
+        }
         Vector3 camCenter = (pos1 + pos2) / 2;
         Vector3 camDims = GetCamExtents() * 2;
         Vector3 playerDiff = pos2 - pos1;

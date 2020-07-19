@@ -9,6 +9,7 @@ public class passThrough : MonoBehaviour
 
     private GameObject playerToIgnore;
     private GameObject topOfPlayer;
+    //public GameObject box;
 
     void Awake()
     {
@@ -22,5 +23,6 @@ public class passThrough : MonoBehaviour
     {
         Physics2D.IgnoreCollision(this.GetComponent<Collider2D>(),playerToIgnore.GetComponent<Collider2D>());
         Physics2D.IgnoreCollision(this.GetComponent<Collider2D>(),topOfPlayer.GetComponent<Collider2D>());
+        //Physics2D.IgnoreCollision(this.GetComponent<Collider2D>(),box.GetComponent<Collider2D>());
     }
 }
